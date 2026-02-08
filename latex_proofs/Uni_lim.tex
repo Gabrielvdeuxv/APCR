@@ -1,0 +1,34 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\title {Unicité de la limite d'une suite numérique}
+\author{Gabriel Vandevoorde}
+
+
+\begin{document}
+
+\maketitle
+%Ceci est un commentaire
+Soit $ (u_{n})_{n \in \mathbb{N}} \in \mathbb{R}^{\mathbb{N}}$.
+On suppose qu'on dispose de $ l \in \mathbb{R} $ tel que $ u_{n} \xrightarrow[n \rightarrow \infty]{} l$
+
+Ce $l \in \mathbb{R}$ est unique, et appelé limite de la suite $(u_{n})_{n \in \mathbb{R}}$ 
+\newline On raisonne par l'absurde. Supposons que l'on dispose de $l_{1}, l_{2} \in \mathbb{R} $ tels que 
+
+$ u_{n} \xrightarrow[n \rightarrow \infty]{} l_{1}$ et $ u_{n} \xrightarrow[n \rightarrow \infty]{} l_{2}$ 
+
+Alors d'après la définition de la convergence d'une suite, en posant $\epsilon= \frac{|l_{1} - l_{2}|}{4} > 0$
+On dispose de $N_{1},N_{2} \in \mathbb{N}$ tels que, pour $n >= N_{1}$ on ait $u_{n} \in [l_{1}-\epsilon , l_{1} + \epsilon  ] $
+et pour $n >= N_{2}$ $u_{n} \in [l_{2}-\epsilon , l_{2} + \epsilon  ] $
+
+Sans perte de généralités, on peut supposer que $l_{1} < l_{2}$, on a alors
+en posant $N = max(N_{1},N_{2}) $ il vient que $\forall n >= N$, $u_{n} \in [l_{1}-\epsilon , l_{1} + \epsilon  ] \cap [l_{2}-\epsilon , l_{2} + \epsilon  ]$
+Or $[l_{1}-\epsilon , l_{1} + \epsilon  ] \cap [l_{2}-\epsilon , l_{2} + \epsilon  ] = \emptyset $
+
+Ceci est absurde, achevant donc la démonstration.
+
+ 
+ 
+ 
+
+\end{document}
